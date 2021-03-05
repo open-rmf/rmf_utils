@@ -1,4 +1,5 @@
-# rmf\_core
+# Internal RMF utilities
+
 The `rmf_core` packages provide the centralized functions of
 the Robotics Middleware Framework (RMF). These include task
 queuing, conflict-free resource scheduling, utilities to help
