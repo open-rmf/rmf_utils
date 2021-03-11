@@ -22,12 +22,12 @@
 
 namespace rmf_utils {
 
-template <typename T>
+template<typename T>
 using optional = std::optional<T>;
 
 inline constexpr std::nullopt_t nullopt{std::nullopt};
 
-template <typename T>
+template<typename T>
 std::optional<T> pointer_to_opt(const T* const ptr)
 {
   if (ptr)

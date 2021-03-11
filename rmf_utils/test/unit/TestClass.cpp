@@ -23,7 +23,7 @@ class TestClass::Implementation
 public:
 
   Implementation(const std::string& test_text)
-    : _test_text(test_text)
+  : _test_text(test_text)
   {
     // Do nothing
   }
@@ -33,7 +33,7 @@ public:
 
 //==============================================================================
 TestClass::TestClass(const std::string& test_text)
-  : _pimpl(rmf_utils::make_impl<Implementation>(test_text))
+: _pimpl(rmf_utils::make_impl<Implementation>(test_text))
 {
   // Do nothing
 }

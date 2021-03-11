@@ -90,7 +90,10 @@ if(BUILD_TESTING AND ament_cmake_catch2_FOUND)
   )
 
   find_package(rmf_cmake_uncrustify REQUIRED)
-  find_file(uncrustify_config_file NAMES "test/format/rmf_code_style.cfg")
+  find_file(uncrustify_config_file 
+    NAMES "rmf_code_style.cfg"
+    PATHS "test/format/")
+
   rmf_uncrustify(
     ARGN include src test
     CONFIG_FILE ${uncrustify_config_file}
