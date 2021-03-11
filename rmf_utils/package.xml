@@ -10,6 +10,9 @@
 
   <build_depend>cmake</build_depend>
 
+  <test_depend>ament_cmake</test_depend>
+  <test_depend>ament_cmake_catch2</test_depend>
+
   <export>
     <build_type>cmake</build_type>
   </export>

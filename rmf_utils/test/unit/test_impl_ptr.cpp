@@ -19,24 +19,23 @@
 #include "TestClass.hpp"
 
 #include <iostream>
+#include <rmf_utils/catch.hpp>
 
-int main()
+TEST_CASE("Test impl_ptr")
 {
-  // TODO(MXG): Make this a proper test
   TestClass test("here is my test string");
-  std::cout << test.get_test_text() << std::endl;
+  CHECK(test.get_test_text() == "here is my test string");
 
   TestClass copy{test};
-  std::cout << copy.get_test_text() << std::endl;
+  CHECK(test.get_test_text() == "here is my test string");
 
   TestClass moved = std::move(test);
-  std::cout << moved.get_test_text() << std::endl;
+  CHECK(moved.get_test_text() == "here is my test string");
 
-  if(test._pimpl)
-    std::cout << "impl_ptr returning true" << std::endl;
-  else
-    std::cout << "impl_ptr returning false" << std::endl;
+  CHECK_FALSE(test._pimpl);
 
   test = TestClass("replacing the text");
   std::cout << test.get_test_text() << std::endl;
+
+  CHECK(test.get_test_text() == "replacing the text");
 }
