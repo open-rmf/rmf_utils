@@ -73,4 +73,30 @@ export(
 
 export(PACKAGE rmf_utils-targets)
 
-add_subdirectory(test/unit)
+find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_catch2 REQUIRED)
+if(BUILD_TESTING AND ament_cmake_catch2_FOUND)
+  file(GLOB_RECURSE unit_test_srcs "test/*.cpp")
+  
+  ament_add_catch2(
+    test_rmf_utils test/main.cpp ${unit_test_srcs}
+    TIMEOUT 300)
+  target_link_libraries(test_rmf_utils
+    rmf_utils
+  )
+  target_include_directories(test_rmf_utils
+    PRIVATE
+      $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/>
+  )
+
+  find_package(rmf_cmake_uncrustify REQUIRED)
+  find_file(uncrustify_config_file 
+    NAMES "rmf_code_style.cfg"
+    PATHS "test/format/")
+
+  rmf_uncrustify(
+    ARGN include src test
+    CONFIG_FILE ${uncrustify_config_file}
+    MAX_LINE_LENGTH 80
+  )
+endif()

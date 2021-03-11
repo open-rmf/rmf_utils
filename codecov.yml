@@ -8,8 +8,9 @@ coverage:
         informational: true
     patch: off
 fixes:
-  - "ros_ws/src/rmf_utils/::"
+  - "ros_ws/src/*/rmf_utils/::"
 comment:
   layout: "diff, flags, files"
   behavior: default
-
+ignore:
+  - "rmf_utils/include/rmf_utils/catch.hpp"

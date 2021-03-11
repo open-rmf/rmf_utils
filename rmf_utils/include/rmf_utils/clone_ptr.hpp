@@ -39,7 +39,7 @@ class clone_ptr;
 
 //==============================================================================
 template<typename T, typename... Args>
-clone_ptr<T> make_clone(Args&&... args);
+clone_ptr<T> make_clone(Args&& ... args);
 
 //==============================================================================
 template<typename T>
@@ -93,14 +93,14 @@ public:
 
   clone_ptr& operator=(const clone_ptr& other)
   {
-    _ptr = other._ptr? other._ptr->clone().release() : nullptr;
+    _ptr = other._ptr ? other._ptr->clone().release() : nullptr;
     return *this;
   }
 
   template<typename U>
   clone_ptr& operator=(const clone_ptr<U>& other)
   {
-    _ptr = other._ptr? other._ptr->clone().release() : nullptr;
+    _ptr = other._ptr ? other._ptr->clone().release() : nullptr;
     return *this;
   }
 
@@ -194,7 +194,7 @@ private:
 
 //==============================================================================
 template<typename T, typename... Args>
-clone_ptr<T> make_clone(Args&&... args)
+clone_ptr<T> make_clone(Args&& ... args)
 {
   return clone_ptr<T>(new T(std::forward<Args>(args)...));
 }
