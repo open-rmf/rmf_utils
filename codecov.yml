@@ -12,4 +12,5 @@ fixes:
 comment:
   layout: "diff, flags, files"
   behavior: default
-
+ignore:
+  - "rmf_utils/include/rmf_utils/catch.hpp"
