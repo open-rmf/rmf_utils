@@ -104,5 +104,5 @@ endif()
 install(
   FILES
     test/format/rmf_code_style.cfg
-  DESTINATION lib/${PROJECT_NAME}/cmake
+  DESTINATION share/${PROJECT_NAME}
 )
