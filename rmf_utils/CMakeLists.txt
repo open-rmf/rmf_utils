@@ -100,3 +100,9 @@ if(BUILD_TESTING AND ament_cmake_catch2_FOUND)
     MAX_LINE_LENGTH 80
   )
 endif()
+
+install(
+  FILES
+    test/format/rmf_code_style.cfg
+  DESTINATION share/${PROJECT_NAME}
+)
