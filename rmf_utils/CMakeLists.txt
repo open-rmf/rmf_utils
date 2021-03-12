@@ -71,12 +71,6 @@ export(
   NAMESPACE rmf_utils::
 )
 
-install(
-  FILES
-    test/format/rmf_code_style.cfg
-  DESTINATION lib/${PROJECT_NAME}/cmake
-)
-
 export(PACKAGE rmf_utils-targets)
 
 find_package(ament_cmake REQUIRED)
@@ -106,3 +100,9 @@ if(BUILD_TESTING AND ament_cmake_catch2_FOUND)
     MAX_LINE_LENGTH 80
   )
 endif()
+
+install(
+  FILES
+    test/format/rmf_code_style.cfg
+  DESTINATION lib/${PROJECT_NAME}/cmake
+)
