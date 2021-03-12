@@ -71,6 +71,12 @@ export(
   NAMESPACE rmf_utils::
 )
 
+install(
+  FILES
+    test/format/rmf_code_style.cfg
+  DESTINATION lib/${PROJECT_NAME}/cmake
+)
+
 export(PACKAGE rmf_utils-targets)
 
 find_package(ament_cmake REQUIRED)
