@@ -73,9 +73,9 @@ export(
 
 export(PACKAGE rmf_utils-targets)
 
-find_package(ament_cmake REQUIRED)
-find_package(ament_cmake_catch2 REQUIRED)
-if(BUILD_TESTING AND ament_cmake_catch2_FOUND)
+find_package(ament_cmake_catch2 QUIET)
+find_package(rmf_cmake_uncrustify QUIET)
+if(BUILD_TESTING AND ament_cmake_catch2_FOUND AND rmf_cmake_uncrustify_FOUND)
   file(GLOB_RECURSE unit_test_srcs "test/*.cpp")
   
   ament_add_catch2(
@@ -89,7 +89,6 @@ if(BUILD_TESTING AND ament_cmake_catch2_FOUND)
       $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/>
   )
 
-  find_package(rmf_cmake_uncrustify REQUIRED)
   find_file(uncrustify_config_file 
     NAMES "rmf_code_style.cfg"
     PATHS "test/format/")

@@ -10,7 +10,6 @@
 
   <build_depend>cmake</build_depend>
 
-  <test_depend>ament_cmake</test_depend>
   <test_depend>ament_cmake_catch2</test_depend>
   <test_depend>rmf_cmake_uncrustify</test_depend>
 
