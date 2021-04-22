@@ -97,13 +97,14 @@ The tests are not run automatically.
 
 ### Public API Testing [4.ii]
 
-`rmf_utils` contains partial tests for some of its public API.
-The tests are not run automatically.
-The API is not completely covered by tests.
+Each part of the public API has tests, and new additions or changes to the public API require tests before being added.
+They are located in the [`test`](https://github.com/open-rmf/rmf_utils/tree/master/rmf_utils/test) directory.
 
 ### Coverage [4.iii]
 
-`rmf_utils` does not track coverage statistics.
+`rmf_utils` tracks code coverage statistics. There is no coverage target currently, but new changes are required to make a best effort to keep or increase coverage before being accepted. Decreases are allowed if properly justified and accepted by reviewers. Code coverage will be improved in the future as time allows.
+
+Current coverage statistics can be viewed [here](https://codecov.io/gh/open-rmf/rmf_utils).
 
 ### Performance [4.iv]
 
