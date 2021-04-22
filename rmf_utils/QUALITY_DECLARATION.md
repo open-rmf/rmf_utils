@@ -48,7 +48,7 @@ The generated CMake config file is installed and therefore part of the public AP
 
 ### Contributor Origin [2.ii]
 
-`rmf_utils` does not require a confirmation of contributor origin.
+`rmf_utils` uses DCO as its confirmation of contributor origin policy. More information can be found in [CONTRIBUTING](../CONTRIBUTING.md).
 
 ### Peer Review Policy [2.iii]
 
@@ -132,7 +132,7 @@ The API is not completely covered by tests.
 ### Target platforms [6.i]
 
 `rmf_utils` does not support all of the tier 1 platforms as described in [REP-2000](https://www.ros.org/reps/rep-2000.html#support-tiers).
-`rmf_utils` supports ROS Eloquent.
+`rmf_utils` supports ROS Foxy.
 
 ## Security [7]
 
