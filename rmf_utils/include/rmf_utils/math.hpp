@@ -25,10 +25,10 @@ namespace rmf_utils {
 //==============================================================================
 inline double wrap_to_pi(double value)
 {
-  while(value < -M_PI)
+  while (value < -M_PI)
     value += 2.0*M_PI;
 
-  while(M_PI < value)
+  while (M_PI < value)
     value -= 2.0*M_PI;
 
   return value;

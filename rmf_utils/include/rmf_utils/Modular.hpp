@@ -57,10 +57,11 @@ public:
     if (Window < distance)
     {
       throw std::runtime_error(
-            "[rmf_traffic::schedule::Modular] modular distance between value ["
-            + std::to_string(rhs) + "] and basis [" + std::to_string(_basis)
-            + "] is too big [" + std::to_string(distance) + "]. Maximum is "
-            + std::to_string(Window));
+              "[rmf_traffic::schedule::Modular] modular distance between value ["
+              + std::to_string(
+                rhs) + "] and basis [" + std::to_string(_basis)
+              + "] is too big [" + std::to_string(distance) + "]. Maximum is "
+              + std::to_string(Window));
     }
 
     // If the distance from the adjusted basis is less than half the window
@@ -107,7 +108,7 @@ private:
   /// us to witness this large of a gap between updates.
   ///
   constexpr static V Window =
-      static_cast<V>(std::numeric_limits<std::make_signed_t<V>>::max());
+    static_cast<V>(std::numeric_limits<std::make_signed_t<V>>::max());
 
   constexpr static V HalfWindow = Window/2;
 

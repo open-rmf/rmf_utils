@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 Open Source Robotics Foundation
+ * Copyright (C) 2021 Open Source Robotics Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,27 +15,7 @@
  *
 */
 
-#ifndef RMF_UTILS__OPTIONAL_HPP
-#define RMF_UTILS__OPTIONAL_HPP
+#define CATCH_CONFIG_MAIN
+#include <rmf_utils/catch.hpp>
 
-#include <optional>
-
-namespace rmf_utils {
-
-template<typename T>
-using optional = std::optional<T>;
-
-inline constexpr std::nullopt_t nullopt{std::nullopt};
-
-template<typename T>
-std::optional<T> pointer_to_opt(const T* const ptr)
-{
-  if (ptr)
-    return *ptr;
-
-  return std::nullopt;
-}
-
-} // namespace rmf_utils
-
-#endif // RMF_UTILS__OPTIONAL_HPP
+// This will create the main(int argc, char* argv[]) entry point for testing
