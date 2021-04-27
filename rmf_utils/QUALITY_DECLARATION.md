@@ -48,7 +48,8 @@ The generated CMake config file is installed and therefore part of the public AP
 
 ### Contributor Origin [2.ii]
 
-`rmf_utils` uses DCO as its confirmation of contributor origin policy. More information can be found in [CONTRIBUTING](../CONTRIBUTING.md).
+`rmf_utils` uses DCO as its confirmation of contributor origin policy.
+More information can be found in [CONTRIBUTING](../CONTRIBUTING.md).
 
 ### Peer Review Policy [2.iii]
 
