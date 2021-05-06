@@ -18,6 +18,7 @@
 #ifndef RMF_UTILS__TEST__UNIT__TESTCLASS_HPP
 #define RMF_UTILS__TEST__UNIT__TESTCLASS_HPP
 
+#include <string>
 #include <rmf_utils/impl_ptr.hpp>
 
 class TestClass
