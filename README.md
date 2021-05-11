@@ -1,4 +1,9 @@
+
 # Internal RMF utilities
+
+![](https://github.com/open-rmf/rmf_utils/workflows/build/badge.svg)
+[![codecov](https://codecov.io/gh/open-rmf/rmf_utils/branch/main/graph/badge.svg)](https://codecov.io/gh/open-rmf/rmf_utils)
+
 
 The `rmf_utils` package provides some low-level C++ programming utilities that are used across all Open RMF C++ packages.
 This package is a tool for the developers of Open RMF, and not necessarily intended for external developers.
