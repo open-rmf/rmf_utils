@@ -2,6 +2,15 @@
 Changelog for package rmf_utils
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.3.0 (2020-01-19)
+------------------
+* Adding missing string include for test, only shows up when building with clang (`#9 <https://github.com/open-rmf/rmf_utils/issues/9>`_)
+* Add quality declaration documents (`#1 <https://github.com/open-rmf/rmf_utils/issues/1>`_)
+* Changed package requirement to QUIET to allow use in non-ROS 2 packages (`#6 <https://github.com/open-rmf/rmf_utils/issues/6>`_)
+* install rmf_code_style.cfg in rmf_utils_DIR (`#4 <https://github.com/open-rmf/rmf_utils/issues/4>`_)
+* change to catch2 test, uncrustify everything (`#3 <https://github.com/open-rmf/rmf_utils/issues/3>`_)
+* Contributors: Aaron Chong, Geoffrey Biggs, ddengster
+
 1.1.0 (2020-09-24)
 ------------------
 * Replace rmf_utils::optional with std::optional (`#177 <https://github.com/osrf/rmf_core/issues/177>`_)
