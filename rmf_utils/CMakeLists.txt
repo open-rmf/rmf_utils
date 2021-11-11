@@ -71,8 +71,6 @@ export(
   NAMESPACE rmf_utils::
 )
 
-export(PACKAGE rmf_utils-targets)
-
 find_package(ament_cmake_catch2 QUIET)
 find_package(rmf_cmake_uncrustify QUIET)
 if(BUILD_TESTING AND ament_cmake_catch2_FOUND AND rmf_cmake_uncrustify_FOUND)
