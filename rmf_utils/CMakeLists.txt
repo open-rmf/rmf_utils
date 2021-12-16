@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5.0)
 project(rmf_utils VERSION 1.3.0)
 
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -12,10 +12,11 @@ endif()
 
 include(GNUInstallDirs)
 
-add_library(rmf_utils INTERFACE)
+file(GLOB_RECURSE lib_srcs "src/rmf_utils/*.cpp")
+add_library(rmf_utils SHARED ${lib_srcs})
 
 target_include_directories(rmf_utils
-  INTERFACE
+  PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
