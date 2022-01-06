@@ -53,8 +53,8 @@ public:
 RateLimiter::RateLimiter(
   std::chrono::steady_clock::duration period_limit_,
   std::size_t count_limit_)
-  : _pimpl(rmf_utils::make_impl<Implementation>(
-        Implementation{period_limit_, count_limit_}))
+: _pimpl(rmf_utils::make_impl<Implementation>(
+      Implementation{period_limit_, count_limit_}))
 {
   // Do nothing
 }
