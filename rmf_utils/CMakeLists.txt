@@ -96,6 +96,7 @@ if(BUILD_TESTING AND ament_cmake_catch2_FOUND AND ament_cmake_uncrustify_FOUND)
     ARGN include src test
     CONFIG_FILE ${uncrustify_config_file}
     MAX_LINE_LENGTH 80
+    EXCLUDE include/rmf_utils/catch.hpp
   )
 endif()
 
