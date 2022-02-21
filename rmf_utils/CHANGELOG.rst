@@ -2,6 +2,10 @@
 Changelog for package rmf_utils
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.4.0 (2022-02-14)
+------------------
+* Add a class to help with limiting rates of events (`#18 <https://github.com/open-rmf/rmf_utils/pull/18>)
+
 1.3.0 (2020-01-19)
 ------------------
 * Adding missing string include for test, only shows up when building with clang (`#9 <https://github.com/open-rmf/rmf_utils/issues/9>`_)
