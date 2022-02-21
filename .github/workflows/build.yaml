@@ -9,8 +9,6 @@ jobs:
   build_and_test:
     name: Build and test
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu:jammy
     steps:
       - name: pwd
         run: pwd
