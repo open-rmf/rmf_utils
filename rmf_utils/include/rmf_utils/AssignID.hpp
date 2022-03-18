@@ -23,7 +23,7 @@
 namespace rmf_utils {
 
 //==============================================================================
-template <typename T>
+template<typename T>
 class AssignID
 {
 public:
