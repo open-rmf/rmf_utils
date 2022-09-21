@@ -39,7 +39,7 @@ class clone_ptr;
 
 //==============================================================================
 template<typename T, typename... Args>
-clone_ptr<T> make_clone(Args&&... args);
+clone_ptr<T> make_clone(Args&& ... args);
 
 //==============================================================================
 template<typename T>
@@ -194,7 +194,7 @@ private:
 
 //==============================================================================
 template<typename T, typename... Args>
-clone_ptr<T> make_clone(Args&&... args)
+clone_ptr<T> make_clone(Args&& ... args)
 {
   return clone_ptr<T>(new T(std::forward<Args>(args)...));
 }
