@@ -17,7 +17,7 @@ jobs:
       - name: pwd
         run: pwd
       - name: deps
-        uses: ros-tooling/setup-ros@v0.2
+        uses: ros-tooling/setup-ros@v0.4
         with:
           required-ros-distributions: rolling 
       - name: build
