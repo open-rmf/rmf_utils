@@ -2,8 +2,8 @@
 Changelog for package rmf_utils
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.4.1 (2023-06-05)
+------------------
 * Switch to rst changelogs (`#28 <https://github.com/open-rmf/rmf_utils/pull/28>`_)
 * Reusable CI (`#24 <https://github.com/open-rmf/rmf_utils/pull/24>`_)
 * Contributors: Esteban Martinena Guerrero, Yadunund
