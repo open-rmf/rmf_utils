@@ -19,6 +19,7 @@
 #define RMF_UTILS__MODULAR_HPP
 
 #include <stdexcept>
+#include <string>
 #include <limits>
 #include <type_traits>
 
