@@ -2,6 +2,11 @@
 Changelog for package rmf_utils
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix build with apple clang (`#27 <https://github.com/open-rmf/rmf_utils/pull/27>`_)
+* Contributors: Yadunund
+
 1.6.0 (2023-06-08)
 ------------------
 
