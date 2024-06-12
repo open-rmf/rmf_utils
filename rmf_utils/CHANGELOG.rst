@@ -2,6 +2,9 @@
 Changelog for package rmf_utils
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.6.1 (2024-06-01)
 ------------------
 * Fix build with apple clang (`#27 <https://github.com/open-rmf/rmf_utils/pull/27>`_)
