@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5.0)
+cmake_minimum_required(VERSION 3.20)
 
 project(rmf_utils VERSION 1.4.0)
 
