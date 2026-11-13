@@ -109,7 +109,7 @@ public:
       && is_default_manageable::value,
       dummy_t_
     >::type = dummy_t_()) noexcept
-  : unique_impl_ptr(u, &details::default_delete<T>, &details::default_copy<T>)
+  : unique_impl_ptr(u, & details::default_delete<T>, & details::default_copy<T>)
   {
   }
 
@@ -320,7 +320,7 @@ inline bool operator>=(std::nullptr_t, const unique_impl_ptr<T, D>& p)
 
 
 template<class T, class... Args>
-inline unique_impl_ptr<T> make_unique_impl(Args&& ... args)
+inline unique_impl_ptr<T> make_unique_impl(Args&&... args)
 {
   return unique_impl_ptr<T>(new T(std::forward<Args>(
         args)...), &details::default_delete<T>);
@@ -368,7 +368,7 @@ public:
       && is_default_manageable::value,
       dummy_t_
     >::type = dummy_t_()) noexcept
-  : impl_ptr(u, &details::default_delete<T>, &details::default_copy<T>) {}
+  : impl_ptr(u, & details::default_delete<T>, & details::default_copy<T>) {}
 
   impl_ptr(const impl_ptr& r)
   : impl_ptr(r.clone()) {}
@@ -474,14 +474,14 @@ private:
 };
 
 template<class T, class... Args>
-inline impl_ptr<T> make_impl(Args&& ... args)
+inline impl_ptr<T> make_impl(Args&&... args)
 {
   return impl_ptr<T>(new T(std::forward<Args>(
         args)...), &details::default_delete<T>, &details::default_copy<T>);
 }
 
 template<class U, class D, class... Args>
-impl_ptr<U> make_derived_impl(Args&& ... args)
+impl_ptr<U> make_derived_impl(Args&&... args)
 {
   return impl_ptr<U>(
     new D(std::forward<Args>(args)...),
