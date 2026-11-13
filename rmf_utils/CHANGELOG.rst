@@ -2,6 +2,12 @@
 Changelog for package rmf_utils
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* lint
+* bump cmake versions (`#38 <https://github.com/open-rmf/rmf_utils/issues/38>`_)
+* Contributors: Aaron Chong
+
 1.9.0 (2026-09-22)
 ------------------
 
