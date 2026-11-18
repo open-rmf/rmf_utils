@@ -19,9 +19,9 @@
 #define RMF_UTILS__MACROS_HPP
 
 #define RMF_UTILS__DEFAULT_COPY_MOVE(Class) \
-  Class(const Class&) = default; \
-  Class(Class&&) = default; \
-  Class& operator=(const Class&) = default; \
-  Class& operator=(Class&&) = default
+        Class(const Class&) = default; \
+        Class(Class&&) = default; \
+        Class& operator=(const Class&) = default; \
+        Class& operator=(Class&&) = default
 
 #endif // RMF_UTILS__MACROS_HPP
