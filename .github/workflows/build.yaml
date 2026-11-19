@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
     branches:
-      - main
+      - lyrical
   schedule:
     - cron: '35 0 * * *'
   workflow_dispatch:
@@ -14,7 +14,7 @@ on:
       repos_branch_override:
         description: 'Branch of open-rmf/rmf for rmf.repos (auto = match ros_distribution)'
         type: string
-        default: 'main'
+        default: 'auto'
 
 jobs:
   build_and_test:
@@ -24,5 +24,6 @@ jobs:
       # NOTE: Avoid adding comments in the packages lines, this can break some of the called scripts in github actions
       packages: |
         rmf_utils
+      dist-matrix: '[{"ros_distribution": "lyrical"}]'
       ros-distribution: ${{ inputs.ros_distribution || '' }}
-      repos-branch-override: ${{ inputs.repos_branch_override || 'main' }}
+      repos-branch-override: ${{ inputs.repos_branch_override || 'auto' }}
